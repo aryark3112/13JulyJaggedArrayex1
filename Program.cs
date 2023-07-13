@@ -91,21 +91,44 @@ namespace _13july
             //{ Console.WriteLine(student); }
             //Console.ReadKey();
 
-            //two dimensional array or rectangular array
-            string[,] myRectArray = new string[4, 3];
-            for (int i=0;i<myRectArray.GetLength(0);i++)
+            //two dimensional array or rectangular array syntax
+            //string[,] myRectArray = new string[4, 3];
+            //for (int i = 0; i < myRectArray.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < myRectArray.GetLength(1); j++)
+            //    {
+            //        myRectArray[i, j] = "[" + i + "," + j + "]";
+            //    }
+            //}
+            //Console.WriteLine("Stored Values are:");
+            //for (int i = 0; i < myRectArray.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < myRectArray.GetLength(1); j++)
+            //    {
+            //        Console.WriteLine(myRectArray[i, j] + "\t");
+            //    }
+            //    Console.WriteLine("\n");
+            //}
+            //Console.ReadKey();
+
+            int[,] marks = new int[4, 3];
+            for (int i=0; i<4; i++)
             {
-                for (int j=0;j<myRectArray.GetLength(1);j++)
+                Console.WriteLine($"Enter Student {i + 1}\'s Roll Number");
+                marks[i, 0] = int.Parse(Console.ReadLine());
+                for(int j=1;j<3;j++)
                 {
-                    myRectArray[i, j] = "[" + i + "," + j + "]";
+                    Console.WriteLine($"Enter marks of Student\'s{i + 1} in Sem{j}");
+                    marks[i, j] = int.Parse(Console.ReadLine());
                 }
             }
-            Console.WriteLine("Stored Values are:");
-            for (int i = 0; i < myRectArray.GetLength(0); i++)
+            Console.WriteLine("Marks List as Follows");
+            Console.WriteLine("RollNo\tSemONE\tSemTwo");
+            for (int i = 0; i < 4; i++)
             {
-                for (int j = 0; j < myRectArray.GetLength(1); j++)
+                for (int j = 1; j < 3; j++)
                 {
-                    Console.WriteLine(myRectArray[i, j] + "\t");
+                    Console.Write(marks[i, j] + "\t");
                 }
                 Console.WriteLine("\n");
             }
