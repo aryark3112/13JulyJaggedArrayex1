@@ -10,7 +10,7 @@ namespace _13july
     {
         static void Main(string[] args)
         {
-            //            //Conditional Operator (?true case :false case)
+            //Conditional Operator (?true case :false case)
             //int num1, num2;
             //Console.WriteLine("Enter First Number");
             //num1 = int.Parse(Console.ReadLine());
@@ -78,19 +78,38 @@ namespace _13july
             //    Console.ReadKey();
 
             //for each loop
-            Console.WriteLine("Enter Number of Students");
-            int nos = int.Parse(Console.ReadLine());
-            string[] students = new string[nos];
-            for (int i=0;i<nos; i++)
-            {
-                Console.WriteLine($"Enter Student{i+1}\'s name");
-                students[i] = Console.ReadLine();
-            }
-            Console.WriteLine("List of Students");
-            foreach (string student in students)
-            { Console.WriteLine((student); }
-            Console.ReadKey();
+            //Console.WriteLine("Enter Number of Students");
+            //int nos = int.Parse(Console.ReadLine());
+            //string[] students = new string[nos];
+            //for (int i=0;i<nos; i++)
+            //{
+            //    Console.WriteLine($"Enter Student{i+1}\'s name");
+            //    students[i] = Console.ReadLine();
+            //}
+            //Console.WriteLine("List of Students");
+            //foreach (string student in students)
+            //{ Console.WriteLine(student); }
+            //Console.ReadKey();
 
+            //two dimensional array or rectangular array
+            string[,] myRectArray = new string[4, 3];
+            for (int i=0;i<myRectArray.GetLength(0);i++)
+            {
+                for (int j=0;j<myRectArray.GetLength(1);j++)
+                {
+                    myRectArray[i, j] = "[" + i + "," + j + "]";
+                }
+            }
+            Console.WriteLine("Stored Values are:");
+            for (int i = 0; i < myRectArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myRectArray.GetLength(1); j++)
+                {
+                    Console.WriteLine(myRectArray[i, j] + "\t");
+                }
+                Console.WriteLine("\n");
+            }
+            Console.ReadKey();
         }
     }
 }
