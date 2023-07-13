@@ -54,19 +54,43 @@ namespace _13july
             //}
 
             //Array (Single dimensional array)
-            int[] marks =new int[5];
-            Console.WriteLine("Enter Marks");
-            for(int i = 0; i < marks.Length; i++)
+            //int[] marks =new int[5];
+            //Console.WriteLine("Enter Marks");
+            //for(int i = 0; i < marks.Length; i++)
+            //{
+            //    Console.WriteLine("Enter marks in subject" + (i + 1));
+            //    marks[i] = int.Parse(Console.ReadLine());
+            //}
+            //Console.WriteLine("*Marks List*");
+            //for(int i=0; i<marks.Length;i++)
+            //{
+            //    Console.WriteLine($"Subject {i + 1} \t Marks:{marks[i]}");
+            //}
+            //Console.ReadKey();
+
+            //another method
+            //int[] marks = { 12, 24, 45, 67 };
+            //Console.WriteLine("*Marks List*");
+            //for (int i = 0; i < marks.Length; i++)
+            //{
+            //    Console.WriteLine($"Subject {i + 1} \t Marks:{marks[i]}");
+            //}
+            //    Console.ReadKey();
+
+            //for each loop
+            Console.WriteLine("Enter Number of Students");
+            int nos = int.Parse(Console.ReadLine());
+            string[] students = new string[nos];
+            for (int i=0;i<nos; i++)
             {
-                Console.WriteLine("Enter marks in subject" + (i + 1));
-                marks[i] = int.Parse(Console.ReadLine());
+                Console.WriteLine($"Enter Student{i+1}\'s name");
+                students[i] = Console.ReadLine();
             }
-            Console.WriteLine("*Marks List*");
-            for(int i=0; i<marks.Length;i++)
-            {
-                Console.WriteLine($"Subject {i + 1} \t Marks:{marks[i]}");
-            }
+            Console.WriteLine("List of Students");
+            foreach (string student in students)
+            { Console.WriteLine((student); }
             Console.ReadKey();
+
         }
     }
 }
