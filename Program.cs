@@ -136,37 +136,45 @@ namespace _13july
             //Console.ReadKey();
 
             //2 dimensional array example 3
-            int[,] studMarks = new int[4, 5];
+            //int[,] studMarks = new int[4, 5];
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    Console.Write("Enter Roll No for student {0}: ", i + 1);
+            //    studMarks[i, 0] = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < 4; i++)
+            //    for (int j = 1; j < 5; j++)
+            //    {
+            //        Console.Write("Enter Sem{0} marks for student {1}: ", j, i + 1);
+            //        studMarks[i, j] = Convert.ToInt32(Console.ReadLine());
+            //    }
+            //Console.WriteLine("RollNo\tSem1\tSem2\tSem3\tSem4\tTotal");
+            //for (int i = 0; i < 4; i++)
+            //{
+            //    int totalMarks = 0;
+            //    Console.Write(studMarks[i, 0] + "\t");
+            //    for (int j = 1; j < 5; j++)
+            //    {
+            //        Console.Write(studMarks[i, j] + "\t");
+            //        totalMarks += studMarks[i, j];
+            //    }
+            //    Console.WriteLine(totalMarks);
+            //}
+            //Console.ReadLine();
+
+            //Jagged Array
+            int[][] myJArray  = new int[3][];
+            myJArray[0] = new int[3] { 12, 11, 13 };
+            myJArray[1] = new int[5] { 10, 11, 12,11, 13};
+            myJArray[2] = new int[2] { 0,5 };
+            for(int i=0; i < myJArray.Length; i++)
             {
-                Console.Write("Enter Roll No for student {0}: ", i + 1);
-                studMarks[i, 0] = Convert.ToInt32(Console.ReadLine());
-
-                for (int j = 1; j < 5; j++)
-                {
-                    Console.Write("Enter Sem{0} marks for student {1}: ", j, i + 1);
-                    studMarks[i, j] = Convert.ToInt32(Console.ReadLine());
+                for (int j = 0; j < myJArray[i].Length; j++)
+                { 
+                    Console.Write(myJArray[i][j] + "\t"); 
                 }
+                Console.WriteLine("\n");
             }
-
-            Console.WriteLine("RollNo\tSem1\tSem2\tSem3\tSem4\tTotal");
-            for (int i = 0; i < 4; i++)
-            {
-                int totalMarks = 0;
-                Console.Write(studMarks[i, 0] + "\t");
-
-                for (int j = 1; j < 5; j++)
-                {
-                    Console.Write(studMarks[i, j] + "\t");
-                    totalMarks += studMarks[i, j];
-                }
-
-                Console.WriteLine(totalMarks);
-            }
-
-            Console.ReadLine();
-
+            Console.ReadKey();
 
 
         }
